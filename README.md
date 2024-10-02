@@ -127,4 +127,4 @@ We welcome contributions! Please submit an issue or a pull request if you have s
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/Mrloubane/MIMII_Dataset_WEB/commit/20002499ecc49cf250bdf07961973154f945ac4f) file for details.
