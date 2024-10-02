@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MrLoubane Audio Analysis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script>
+        function showLoading() {
+            document.getElementById('loading').style.display = 'block';  // Show spinner
+            document.querySelector('.btn-submit').disabled = true;  // Disable submit button
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/upload">Upload Audio</a></li>
+                    <li><a href="/results">Results</a></li>
+                    <li><a href="/info">Über das Modell</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="intro">
+        <div class="container">
+            <img src="{{ url_for('static', filename='profileimg.png') }}" alt="Profile Image" class="profile-img">
+            <h1>Ingenieur: Innovationen, Kreieren, Wachsen</h1>
+            <p></p>
+        </div>
+    </section>
+
+    <section class="audio-analyse">
+        <div class="container">
+            <div class="card">
+                <h2>Audio Analyse</h2>
+                <p>Upload an audio file for anomaly detection. Supported formats: .wav, .mp3, .ogg.</p>
+
+                <!-- CSS Spinner -->
+                <div id="loading" class="spinner" style="display:none;">
+                    <div class="lds-dual-ring"></div>
+                </div>
+
+                <form action="/upload" method="post" enctype="multipart/form-data" onsubmit="showLoading()">
+                    <div class="file-input-wrapper">
+                        <label for="file" class="custom-file-upload">
+                            <i class="fas fa-upload"></i> Select an audio file
+                        </label>
+                        <input type="file" name="file" id="file" accept=".wav,.mp3,.ogg">
+                        <span id="file-chosen">No file chosen</span>
+                    </div>
+                    <br>
+                    <button type="submit" class="btn-submit">Upload and Analyze</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+
+    <footer>
+        <p>© 2024 EL Mostapha LOUBANE - All Rights Reserved</p>
+    </footer>
+
+    <script>
+        const fileInput = document.getElementById('file');
+        const fileChosen = document.getElementById('file-chosen');
+    
+        fileInput.addEventListener('change', function() {
+            fileChosen.textContent = this.files[0].name;
+        });
+    </script>
+    
+</body>
+</html>

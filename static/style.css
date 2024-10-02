@@ -1,0 +1,189 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fffbfb;
+    color: #333;
+}
+
+header {
+    background-color: #ffffff;
+    padding: 10px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    height: 70px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(3, 0, 0);
+    font-weight: bold;
+}
+
+.intro {
+    background-color: #0e0f0e;
+    text-align: center;
+    padding: 10px 0;
+    color: white;
+}
+
+.intro h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.intro p {
+    font-size: 1.2em;
+}
+
+.profile-img {
+    width: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+/* Audio Analyse Section */
+.audio-analyse {
+    background-color: #fff;
+    text-align: center;
+    padding: 40px 0;
+}
+
+.audio-analyse .container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.file-input-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 500px;
+}
+
+.custom-file-upload {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #030303;
+    color: white;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.custom-file-upload:hover {
+    background-color: #f1850a;
+    border-color: #f1850a;
+}
+
+.custom-file-upload i {
+    margin-right: 10px;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+#file-chosen {
+    margin-top: 10px;
+    display: block;
+    font-size: 1em;
+    color: #666;
+}
+
+.btn-submit {
+    display: inline-block;
+    background-color: #030303;
+    color: white;
+    padding: 10px 25px;
+    font-size: 1.1em;
+    font-weight: bold;
+    border-radius: 25px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #f1850a;
+    border-color: #f1850a;
+}
+
+/* CSS Spinner */
+.lds-dual-ring {
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+}
+
+.lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 46px;
+    height: 46px;
+    margin: 1px;
+    border-radius: 50%;
+    border: 5px solid #000;
+    border-color: #000 transparent #000 transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+}
+
+@keyframes lds-dual-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.spinner {
+    text-align: center;
+    margin-top: 20px;
+    display: none;  /* Hidden by default */
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 5px 0;
+}

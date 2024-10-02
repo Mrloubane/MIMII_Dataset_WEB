@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MrLoubane Audio Analysis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/upload">Upload Audio</a></li>
+                    <li><a href="/results">Results</a></li>
+                    <li><a href="/info">Über das Modell</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="intro">
+        <div class="container">
+            <img src="{{ url_for('static', filename='profileimg.png') }}" alt="Profile Image" class="profile-img">
+            <h1>Ingenieur: Innovationen, Kreieren, Wachsen</h1>
+            <p>Dieses Audioanalyse-Projekt nutzt modernste Methoden des maschinellen Lernens, insbesondere die Mel-Spektrogramm-Technologie und Autoencoder, um Anomalien in Audiodateien zu erkennen. 
+                Mit Hilfe von Mel-Spektrogrammen wird eine visuelle Darstellung der Audiosignale erstellt, die dann von einem Autoencoder-Modell analysiert wird. Das Modell wurde trainiert, um zwischen normalen und anomalen Signalen zu unterscheiden.
+                Die Anwendung ermöglicht es Benutzern, Audiodateien hochzuladen und in Echtzeit zu analysieren, um potenzielle Anomalien zu erkennen.</p>
+            
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 EL Mostapha LOUBANE - All Rights Reserved</p>
+        </div>
+    </footer>
+
+</body>
+</html>
